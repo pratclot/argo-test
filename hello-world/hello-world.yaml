@@ -23,9 +23,9 @@ spec:
           ports:
             - containerPort: 80
           command:
-            - /agnhost
-            - netexec
-            - --http-port=80
+            - /bin/sh
+            - -c
+            - /bin/sleep 30 && /agnhost netexec --http-port=80
 
 ---
 apiVersion: v1
