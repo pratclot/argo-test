@@ -18,6 +18,10 @@ Some helpers:
 - [x] Multi-environment deployments are enabled by `Kustomize`.
 - [x] Argo CD apps are generated from `ApplicationSet` resource
 
+## Bugs
+
+- I probably forgot to patch some metadata which results in pods belonging to both `dev` and `staging` deployments.
+
 ## Tips
 
 - to test the "outage-enabled" image locally:
