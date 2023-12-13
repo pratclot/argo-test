@@ -5,7 +5,7 @@ Setup:
 - Argo CD inside that cluster, deployed via `helm`
 - `registry.k8s.io/e2e-test-images/agnhost` used as a demo app
 - Docker Hub as container registry
-- GitHub Action that automatically bumps app version, pushes new images and git tags
+- GitHub Action that automatically bumps app version, pushes new images and git tags (God bless Chat GPT!)
 
 Some helpers:
 - `bump2version` emulates automated versioning
