@@ -30,7 +30,7 @@ spec:
           command:
             - /bin/sh
             - -c
-            - /bin/sleep 30 && /agnhost netexec --http-port=80
+            - /bin/sleep 31 && /agnhost netexec --http-port=80
 
 ---
 apiVersion: v1
