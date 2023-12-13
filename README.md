@@ -3,7 +3,7 @@
 Setup:
 - single node k8s cluster made by `minikube`
 - Argo CD inside that cluster, deployed via `helm`
-- registry.k8s.io/e2e-test-images/agnhost used as a demo app
+- `registry.k8s.io/e2e-test-images/agnhost` used as a demo app
 - Docker Hub as container registry
 - GitHub Action that automatically bumps app version, pushes new images and git tags
 
@@ -12,7 +12,11 @@ Some helpers:
 - `/bin/sleep 30` emulates outage if the app is restarted or redeployed
 - sample `monitor.sh` monitoring script can be used to quickly verify outages
 
-Outage-free deployments are achieved via [readiness probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-readiness-probes).
+## Challenge requirements
+
+- [x] Outage-free deployments are achieved via [readiness probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-readiness-probes).
+- [x] Multi-environment deployments are enabled by `Kustomize`.
+- [x] Argo CD apps are generated from `ApplicationSet` resource
 
 ## Tips
 

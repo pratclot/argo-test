@@ -19,7 +19,7 @@ spec:
               port: 80
             initialDelaySeconds: 5
             periodSeconds: 5
-        # taken from https://kubernetes.io/docs/tutorials/hello-minikube/#create-a-service
+          # taken from https://kubernetes.io/docs/tutorials/hello-minikube/#create-a-service
           image: pratclot/hello-world:latest
           resources:
             limits:

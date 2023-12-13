@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- ../../base/
+nameSuffix: -dev
+patches:
+- patch: |-
+    - op: replace
+      path: /spec/template/spec/containers/0/command
+      value:
+        - /agnhost
+        - netexec
+        - --http-port=80
+  target:
+    kind: Deployment
+    name: hello-world
+    version: v1
